@@ -14,7 +14,7 @@ fn main_vs(
     particle: Particle,
 ) -> VertexOutput {
     var out: VertexOutput;
-    
+
     out.position = vec4<f32>(particle.position, 0.0, 1.0);
     out.color = particle.color;
 

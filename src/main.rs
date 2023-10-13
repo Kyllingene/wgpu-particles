@@ -189,7 +189,8 @@ impl State {
             particle.position = [unif() * 2f32 - 1f32, unif() * 2f32 - 1f32];
             // particle.velocity = [(unif() * 2f32 - 0.9f32) * 0.3, (unif() * 2f32 - 0.9f32) * 0.3];
             particle.velocity = [0.1, 0.1];
-            particle.color = [unif(), unif(), unif().max(0.2)];
+            // particle.color = [unif(), unif(), unif().max(0.2)];
+            particle.color = [1.0, 1.0, 1.0];
         }
 
         let mut particle_buffers = Vec::<wgpu::Buffer>::new();
@@ -327,7 +328,7 @@ async fn run() {
     env_logger::init();
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new()
-        .with_inner_size(winit::dpi::PhysicalSize::<u32>::new(800, 600))
+        .with_inner_size(winit::dpi::PhysicalSize::<u32>::new(950, 1045))
         .build(&event_loop)
         .unwrap();
 
